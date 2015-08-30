@@ -1,4 +1,4 @@
-![Logo](http://unicode.org/reports/tr29/print-images/random_access.jpg)
+![Logo](assets/random_access.jpg)
 
 # random-iterator
 
@@ -27,7 +27,7 @@ It is guaranteed that each value will only be returned once by `.next`, and that
 
 ## Generator interface
 
-If you'd like to use a function to iterate randomnly over the array, you can generate one using `random_generator`.
+If you'd like to use a function to iterate randomly over the array, you can generate one using `random_generator`.
 
 ```Javascript
 var array = [1, 2, 5, 6, 10, 20, 25];
