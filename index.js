@@ -44,16 +44,30 @@
         this.available = array.slice();
      };
 
+     /**
+      * @returns a {boolean} value stating whether there is
+      * at least one value we did not already iterate over.
+      */
      iterator.prototype.hasNext = function () {
          return this.available.length > 0;
      };
 
+     /**
+      * @returns the next randomly selected value
+      * of the array, or an undefined value if there
+      * are no remaining ones.
+      */
      iterator.prototype.next = function () {
          if (!this.hasNext()) return;
          var rand_index = (Math.floor(Math.random() * this.available.length));
          return this.available.splice(rand_index, 1)[0];
      };
 
+     /**
+      * @param array the array to iterate over
+      * @returns a {Function} returning the next
+      * randomly selected value from the array.
+      */
      var generator = function (array) {
          var it = new iterator(array);
 
