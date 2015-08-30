@@ -37,33 +37,34 @@
     }
  })('Random', function () {
 
- 	var iterator = function (array) {
+     var iterator = function (array) {
         if (!Array.isArray(array)) {
 		    throw new Error('Argument must be of type `Array`');
         }
         this.available = array.slice();
-	};
+     };
 
-	iterator.prototype.hasNext = function () {
-        return this.available.length > 0;
-	};
+     iterator.prototype.hasNext = function () {
+         return this.available.length > 0;
+     };
 
-	iterator.prototype.next = function () {
-        if (!this.hasNext()) return;
-        var rand_index = (Math.floor(Math.random() * this.available.length));
-        return this.available.splice(rand_index, 1)[0];
-	};
+     iterator.prototype.next = function () {
+         if (!this.hasNext()) return;
+         var rand_index = (Math.floor(Math.random() * this.available.length));
+         return this.available.splice(rand_index, 1)[0];
+     };
 
-	var generator = function (array) {
-        var it = new iterator(array);
+     var generator = function (array) {
+         var it = new iterator(array);
 
-        return function () {
-            return it.next();
-        };
-    };
+         return function () {
+             return it.next();
+         };
 
-	return {
-        Iterator:  iterator,
-        Generator: generator
+     };
+
+     return {
+         Iterator:  iterator,
+         Generator: generator
 	};
 });
