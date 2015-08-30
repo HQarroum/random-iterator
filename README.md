@@ -10,11 +10,11 @@ Lead Maintainer: [Halim Qarroum](mailto:hqm.post@gmail.com)
 
 ## Iterator interface
 
-To use an iterator instance to walk through the array, you can use the `RandomIterator` interface.
+To use an iterator instance to walk through the array, you can use the `Random.Iterator` interface.
 
 ```Javascript
 var array    = [1, 2, 5, 6, 10, 20, 25];
-var iterator = new RandomIterator(array);
+var iterator = new Random.Iterator(array);
 
 while (iterator.hasNext()) {
   // Displays the value located at a
@@ -27,13 +27,26 @@ It is guaranteed that each value will only be returned once by `.next`, and that
 
 ## Generator interface
 
-If you'd like to use a function to iterate randomly over the array, you can generate one using `random_generator`.
+If you'd like to use a function to iterate randomly over the array, you can generate one using `Random.Generator`.
 
 ```Javascript
 var array = [1, 2, 5, 6, 10, 20, 25];
-var next  = random_generator(array);
+var next  = Random.Generator(array);
 
 for (var value; value = next();) {
   console.log(value);
 }
+```
+
+## No conflict
+
+Since the random iterator module is written in the form of an UMD, it might be easy to use it using module loaders such as RequireJS or require in Node while still keeping the module completely encapsulated.
+
+However, in the context of a browser, the `Random` object name is exported in the global namespace. To prevent it from conflicting with another component exporting an object with the same name in the global namespace, you can use the `.noConflict` function.
+
+```Javascript
+// After this call, `random` will reference the
+// exported `Random` object, and the global `Random`
+// attribute will be restored.
+var random = Random.noConflict();
 ```
