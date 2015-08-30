@@ -40,9 +40,9 @@ for (var value; value = next();) {
 
 ## No conflict
 
-Since the random iterator module is written in the form of an UMD, it might be easy to use it using module loaders such as RequireJS or require in Node while still keeping the module completely encapsulated.
+Since the random iterator module is written in the form of an UMD, it might be easy to use it using module loaders such as `RequireJS` or `require` in Node while still keeping the module completely encapsulated.
 
-However, in the context of a browser, the `Random` object name is exported in the global namespace. To prevent it from conflicting with another component exporting an object with the same name in the global namespace, you can use the `.noConflict` function.
+However, in the context of a browser, the `Random` object name is exported in the global namespace. To prevent it from conflicting with another component exporting an object with the same name in the global namespace, you can use the `.noConflict` function as follow.
 
 ```Javascript
 // After this call, `random` will reference the
