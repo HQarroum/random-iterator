@@ -39,7 +39,7 @@
 
      var iterator = function (array) {
         if (!Array.isArray(array)) {
-		    throw new Error('Argument must be of type `Array`');
+            throw new Error('Argument must be of type `Array`');
         }
         this.available = array.slice();
      };
@@ -60,11 +60,10 @@
          return function () {
              return it.next();
          };
-
      };
 
      return {
          Iterator:  iterator,
          Generator: generator
-	};
+     };
 });
