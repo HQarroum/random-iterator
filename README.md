@@ -1,7 +1,3 @@
-<p>
- <img width="360" src="assets/random_access.jpg" />
-</p>
-
 # random-iterator
 [![Code Climate](https://codeclimate.com/repos/55e34129e30ba0755701d6e7/badges/270844380d3b44a833ee/gpa.svg)](https://codeclimate.com/repos/55e34129e30ba0755701d6e7/feed)
 
