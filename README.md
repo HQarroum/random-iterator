@@ -12,8 +12,8 @@ Lead Maintainer: [Halim Qarroum](mailto:hqm.post@gmail.com)
 To use an iterator instance to walk through the array, you can use the `Random.Iterator` interface.
 
 ```Javascript
-var array    = [1, 2, 5, 6, 10, 20, 25];
-var iterator = new Random.Iterator(array);
+const array    = [1, 2, 5, 6, 10, 20, 25];
+const iterator = new Random.Iterator(array);
 
 while (iterator.hasNext()) {
   // Displays the value located at a
@@ -29,10 +29,10 @@ It is guaranteed that each value will only be returned once by `.next`, and that
 If you'd like to use a function to iterate randomly over the array, you can generate one using `Random.Generator`.
 
 ```Javascript
-var array = [1, 2, 5, 6, 10, 20, 25];
-var next  = Random.Generator(array);
+const array = [1, 2, 5, 6, 10, 20, 25];
+const next  = Random.Generator(array);
 
-for (var value; value = next();) {
+for (let value; value = next();) {
   console.log(value);
 }
 ```
