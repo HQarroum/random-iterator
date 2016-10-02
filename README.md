@@ -1,7 +1,7 @@
-## random-iterator
-[![Code Climate](https://codeclimate.com/repos/55e34129e30ba0755701d6e7/badges/270844380d3b44a833ee/gpa.svg)](https://codeclimate.com/repos/55e34129e30ba0755701d6e7/feed)
+# random-iterator
+> This little component allows to randomly iterate over an array using iterators and generators.
 
-This little component allows to randomly iterate over an array using iterators and generators.
+[![Code Climate](https://codeclimate.com/repos/55e34129e30ba0755701d6e7/badges/270844380d3b44a833ee/gpa.svg)](https://codeclimate.com/repos/55e34129e30ba0755701d6e7/feed)
 
 Current version: **1.0.0**
 
